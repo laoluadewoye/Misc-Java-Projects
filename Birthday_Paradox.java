@@ -19,8 +19,8 @@ public class BirthdayParadox {
         return temp;
     }
     
-    public static double paradoxEquation (int numerator, int denomanator) {
-        double percentage = numerator / denomanator;
+    public static double paradoxEquation (long numerator, long denomanator) {
+        double percentage = (numerator / denomanator);
         return percentage;
     }
 
@@ -37,12 +37,12 @@ public class BirthdayParadox {
         
         //Calculation
         numer = factorial(people - 1);
-        denom = Math.pow(365, people - 1);
-        //long result = paradoxEquation(numer, denom);
-        //double trueResult = (1 - result) * 100;
+        denom = (long) Math.pow(365, people - 1);
+        result = (long) paradoxEquation(numer, denom);
+        double trueResult = (1 - result) * 100;
         
         //Output
-        //System.out.println("There is a " + trueResult + "% chance someone shares a birthday. Happy Birthday!");
+        System.out.println("There is a " + trueResult + "% chance someone shares a birthday. Happy Birthday!");
                 
         System.out.println("End of Program");
     }
