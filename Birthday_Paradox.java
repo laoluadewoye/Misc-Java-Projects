@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class BirthdayParadox {
     
-    public static int factorial(int num) {
-        int temp = 1;
+    public static long factorial(int num) {
+        long temp = 1;
         for(int i = num; i > 0; i--) {
             temp = temp * i;
         }
@@ -37,16 +37,15 @@ public class BirthdayParadox {
         people = input.nextInt();
         
         //Calculation
-        int numer = factorial(364);
+        long numer = factorial(364);
         System.out.println(numer);
-        int denom = factorial(365 - people);
+        long denom = factorial(365 - people);
         System.out.println(denom);
-        double result = paradoxEquation(numer, denom, people);
+        long result = paradoxEquation(numer, denom, people);
         double trueResult = (1 - result) * 100;
         
         //Output
         System.out.println("There is a " + trueResult + "% chance someone shares a birthday. Happy Birthday!");
-                
         System.out.println("End of Program");
     }
     
