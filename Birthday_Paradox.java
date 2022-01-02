@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.Math;
 
 public class BirthdayParadox {
     
@@ -7,28 +6,27 @@ public class BirthdayParadox {
         long temp = 1;
         for (int i = num; i > 0; i--) {
             temp = temp * i;
+            System.out.println(temp);
         }
         return temp;
     }
     
-    public static int exponent (int coeff, int expo) {
-        int temp = 1;
-        for (int i = 0; i < expo; i++) {
+    public static long exponent(int coeff, int raise) {
+        long temp = 1;
+        for (int i = 0; i < raise; i++) {
             temp = temp * coeff;
+            System.out.println(temp);
         }
         return temp;
     }
     
-    public static double paradoxEquation (long numerator, long denomanator) {
-        double percentage = (numerator / denomanator);
-        return percentage;
-    }
-
     public static void main(String[] args) {
         //Declaration
         Scanner input = new Scanner(System.in);
         int people;
-        long numer, denom, result;
+        long numer, denom;
+        double percentage;
+
       
         //Input
         System.out.println("This is the birthday paradox!\nYou put the number of people you're comparing and find out the chances of birthday's being shared!");
@@ -36,15 +34,23 @@ public class BirthdayParadox {
         people = input.nextInt();
         
         //Calculation
+        System.out.println("Numerator");
         numer = factorial(people - 1);
-        denom = (long) Math.pow(365, people - 1);
-        result = (long) paradoxEquation(numer, denom);
-        double trueResult = (1 - result) * 100;
+        System.out.println(numer);
+        
+        System.out.println("Denomanator");
+        denom = exponent(365, people - 1);
+        System.out.println(denom);
+        
+        System.out.println("Percentage");
+        percentage = (numer / denom);
+        System.out.println(percentage);
+        
+        double trueResult = (1 - percentage) * 100;
         
         //Output
         System.out.println("There is a " + trueResult + "% chance someone shares a birthday. Happy Birthday!");
                 
         System.out.println("End of Program");
     }
-    
 }
