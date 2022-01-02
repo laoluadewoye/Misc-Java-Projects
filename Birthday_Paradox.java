@@ -1,18 +1,19 @@
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class BirthdayParadox {
     
-    public static long factorial(int num) {
-        long temp = 1;
-        for (int i = num; i > 0; i--) {
+    public static int factorial(int num) {
+        int temp = 1;
+        for (int i = num; i > 1; i--) {
             temp = temp * i;
             System.out.println(temp);
         }
         return temp;
     }
     
-    public static long exponent(int coeff, int raise) {
-        long temp = 1;
+    public static int exponent(int coeff, int raise) {
+        int temp = 1;
         for (int i = 0; i < raise; i++) {
             temp = temp * coeff;
             System.out.println(temp);
@@ -23,8 +24,7 @@ public class BirthdayParadox {
     public static void main(String[] args) {
         //Declaration
         Scanner input = new Scanner(System.in);
-        int people;
-        long numer, denom;
+        int people, numer, denom;
         double percentage;
 
       
