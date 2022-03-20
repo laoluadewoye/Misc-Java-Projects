@@ -23,7 +23,7 @@ public class Main {
 	    Scanner input = new Scanner(System.in);
 	    NumberFormat dollar = NumberFormat.getCurrencyInstance();
 	    int principle = 0;
-	    float annualIR = 0.0F;
+	    float annualIR = 0.0F, monthlyIR;
 	    short period = 0, amountOfPayments;
 	    String test;
 	    
@@ -45,11 +45,11 @@ public class Main {
         }
 		
 		//Calculation (threads)
-		annualIR /= 100; //Convert Percent to decimal by dividing by 100
+		monthlyIR = (annualIR / 12) / 100; //Convert Percent to decimal by dividing by 100 and monthly by dividing by 12
 		amountOfPayments = (short)(period * 12); //12 because we are making monthly payments. There are 12 months in one year. 
 		
 		//Putting info into more global static variables
-		CannualIR = annualIR;
+		CannualIR = monthlyIR;
 		Cperiod = amountOfPayments;
 		
 		//Making thread object instances
