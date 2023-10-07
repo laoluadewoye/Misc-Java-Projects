@@ -1,3 +1,7 @@
+//Program is a group exercise created by the Bulldog Coders Club @ Bowie State University.
+//Author Email - Bulldgocodersclub@gmail.com
+//Author Instagram - https://www.instagram.com/bulldogcodersclub/
+
 import java.util.Scanner;
 import java.lang.Math;
 
